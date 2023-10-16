@@ -1,0 +1,9 @@
+name = "proxy"
+main = "src/index.ts"
+compatibility_date = "2023-10-10"
+workers_dev = false
+
+routes = [
+    { pattern = "worker.initial.solutions/*", zone_name = "initial.solutions" },
+    { pattern = "static.initial.solutions/*", zone_name = "initial.solutions" },
+]

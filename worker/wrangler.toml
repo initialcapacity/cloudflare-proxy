@@ -1,0 +1,9 @@
+name = "worker"
+main = "src/index.ts"
+compatibility_date = "2023-10-10"
+workers_dev = false
+
+routes = [
+    { pattern = "worker.initial.solutions", custom_domain = true },
+    { pattern = "plain.initial.solutions", custom_domain = true },
+]

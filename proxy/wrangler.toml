@@ -7,3 +7,7 @@ routes = [
     { pattern = "worker.initial.solutions/*", zone_name = "initial.solutions" },
     { pattern = "static.initial.solutions/*", zone_name = "initial.solutions" },
 ]
+
+[dev]
+port = 8882
+host = "localhost:8881"

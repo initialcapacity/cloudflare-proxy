@@ -7,3 +7,6 @@ routes = [
     { pattern = "worker.initial.solutions", custom_domain = true },
     { pattern = "plain.initial.solutions", custom_domain = true },
 ]
+
+[dev]
+port = 8881

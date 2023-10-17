@@ -6,9 +6,10 @@ export default {
 		ctx.passThroughOnException();
 		const response = await fetch(request);
 
-		const responseWithCookies = new Response(response.body, response);
-		responseWithCookies.headers.append("Proxied-By", "A worker proxy")
+		const responseWithHeader = new Response(response.body, response);
+		responseWithHeader.headers.append("Proxied-By", "A worker proxy")
+		responseWithHeader.headers.append("Proxied-At", (new Date().getTime() / 1000).toFixed(0))
 
-		return responseWithCookies;
+		return responseWithHeader;
 	},
 };

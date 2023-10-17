@@ -1,7 +1,7 @@
 export interface Env {
 }
 
-export default {
+const handler: ExportedHandler<Env> = {
     async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
         ctx.passThroughOnException();
         const response = await fetch(request);
@@ -13,3 +13,5 @@ export default {
         return responseWithHeader;
     },
 };
+
+export default handler;
